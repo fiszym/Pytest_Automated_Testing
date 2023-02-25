@@ -1,0 +1,2 @@
+Tutaj będzie pierwszy kod pythona i wersjonowanie w Git
+
