@@ -1,2 +1,8 @@
-Tutaj będzie pierwszy kod pythona i wersjonowanie w Git
+#First code in Python
 
+module = "Kasli"
+ver = "3.4"
+date = "20230402"
+testname = module +"_" + ver + "_" date
+
+print "The name of test file is s%" %(testname)
