@@ -3,6 +3,6 @@
 module = "Kasli"
 ver = "3.4"
 date = "20230402"
-testname = module +"_" + ver + "_" date
 
-print "The name of test file is s%" %(testname)
+
+print ( "Test file name is %s_%s_%s") %(module, ver, date)
