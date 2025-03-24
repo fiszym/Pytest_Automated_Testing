@@ -14,22 +14,45 @@ def test_header_is_uppercase(csv_data):
     header = csv_data[0]
     assert header == header.upper()
 
-def test_header_starts_with_id():
+def test_header_starts_with_id(csv_data):
     """First column in header is ID"""
-    assert True
+    header = csv_data[0]
+    column_names = header.split(',')
+    first_column_name = column_names[0]
+    assert first_column_name == 'ID'
 
-def test_header_has_column_created():
+def test_header_has_column_created(csv_data):
     """Header has column CREATED"""
-    assert True
+    header = csv_data[0]
+    column_names = header.split(',')
+    assert 'CREATED' in column_names
 
-def test_header_has_column_updated():
+def test_header_has_column_updated(csv_data):
     """Header has column UPDATED"""
-    assert True
+    header = csv_data[0]
+    column_names = header.split(',')
+    assert 'UPDATED' in column_names
 
-def test_record_matches_header():
+def test_record_matches_header(csv_data):
     """Number of columns in each record matches header"""
-    assert True
+    header = csv_data[0]
+    column_names = header.split(',')
+    header_column_count = len(column_names)
+    errors = []
+    for record in csv_data[1:]:
+        record_values = record.split(',')
+        record_values_count = len(record_values)
+        if record_values_count != header_column_count:
+            errors.append(record)
+    assert not errors
 
-def test_record_first_field_is_number():
+def test_record_first_field_is_number(csv_data):
     """First value in each record is number"""
-    assert True
+    errors = []
+    for record in csv_data[1:]:
+        record_values = record.split(',')
+        if not record_values[0].isdigit():
+            errors.append(record)
+    assert not errors
+
+    
