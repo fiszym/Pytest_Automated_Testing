@@ -1,12 +1,18 @@
+# Data verification in CSV file
+
 import pytest
 
-# Data verification in CSV file
-# First run - only positive
+@pytest.fixture()
+def csv_data():
+    with open('./test-data/book.csv') as f:
+        data = f.read().split('\n')
+    return data
 
 
-def test_header_is_uppercase():
+def test_header_is_uppercase(csv_data):
     """Column names in header are upeprcase"""
-    assert True
+    header = csv_data[0]
+    assert header == header.upper()
 
 def test_header_starts_with_id():
     """First column in header is ID"""
