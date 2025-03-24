@@ -1,10 +1,16 @@
 # Python_0
+
 This repository contains my experiences with Python
 
-## Commands used: 
+## Commands used
 
 ### Virtual environment
-- python -m venv venv       #make v.environment
-- venv\Scripts\activate.bat     #activatee v.environment
-- pip install -r pytest-parametrize-example/requirements.txt        #requirements installation
-- python -m pytest      #running tests
+
+- make v. environment
+  `python -m venv venv`
+- activatee v.environment
+  `venv\Scripts\activate.bat`
+- requirements installation
+  `pip install -r pytest-parametrize-example/requirements.txt`
+- running tests
+  `python -m pytest`

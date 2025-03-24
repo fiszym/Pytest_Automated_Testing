@@ -1,6 +1,7 @@
 import pytest
 
 # Data verification in CSV file
+# First run - only positive
 
 
 def test_header_is_uppercase():
