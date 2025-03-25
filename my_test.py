@@ -2,9 +2,9 @@
 
 import pytest
 
-@pytest.fixture()
-def csv_data():
-    with open('./test-data/book.csv') as f:
+@pytest.fixture(params=['./test-data/address.csv', './test-data/book.csv', './test-data/customer.csv'])
+def csv_data(request):
+    with open(request.param) as f:
         data = f.read().split('\n')
     return data
 
@@ -20,7 +20,6 @@ def csv_records(csv_data):
 def column_names(csv_header):
     return csv_header.split(',')
 
-
 def test_header_is_uppercase(csv_header):
     """Column names in header are upeprcase"""
     assert csv_header == csv_header.upper()
@@ -30,13 +29,10 @@ def test_header_starts_with_id(column_names):
     first_column_name = column_names[0]
     assert first_column_name == 'ID'
 
-def test_header_has_column_created(column_names):
-    """Header has column CREATED"""
-    assert 'CREATED' in column_names
-
-def test_header_has_column_updated(column_names):
-    """Header has column UPDATED"""
-    assert 'UPDATED' in column_names
+@pytest.mark.parametrize('checked_name', ['CREATED', 'UPDATED'])
+def test_header_has_column(column_names, checked_name):
+    """Header has column name: CREATED/UPDATED"""
+    assert checked_name in column_names
 
 def test_record_matches_header(column_names, csv_records):
     """Number of columns in each record matches header"""

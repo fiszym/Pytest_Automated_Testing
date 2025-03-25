@@ -1,6 +1,6 @@
 # Python_0
 
-This repository contains my experiences with Python
+A collection of my experiences and test experiments with Python (Pytest)
 
 ## Commands used
 
@@ -11,6 +11,11 @@ This repository contains my experiences with Python
 - activatee v.environment
   `venv\Scripts\activate.bat`
 - requirements installation
-  `pip install -r pytest-parametrize-example/requirements.txt`
+  `pip install -r ./requirements/requirements.txt`
+
+### Pytest
+
 - running tests
   `python -m pytest`
+- test with extended report 'verbose'
+  `python -m pytest -v`
