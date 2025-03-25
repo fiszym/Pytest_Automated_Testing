@@ -18,6 +18,8 @@ A collection of my experiences and test experiments with Python (Pytest):
   `pip install -r ./requirements/requirements.txt`
 - formatter 'Black' installation
   `pip install black`
+- plguin for code coverage
+  `pip install pytest-cov`
 
 ### Pytest
 
@@ -27,6 +29,8 @@ A collection of my experiences and test experiments with Python (Pytest):
   `python -m pytest -v`
 - test results with generated report into "./test-reports/result.xml"
   `python -m pytest -v --junitxml="./test-reports/result.xml"`
+- test with code coverage reporting
+  `pytest -v -s --cov-report term-missing --cov`
 
 ### Black
 
@@ -36,15 +40,23 @@ A collection of my experiences and test experiments with Python (Pytest):
 - modify lines in settings.json
 
 ```
+
 {
 "editor.formatOnSave": true,
 "python.formatting.provider": "black"
 }
+
 ```
 
 - edit project settings in pyproject.toml
 
 ```
+
 [tool.black]
 line-length = 119
+
+```
+
+```
+
 ```
