@@ -12,6 +12,8 @@ A collection of my experiences and test experiments with Python (Pytest)
   `venv\Scripts\activate.bat`
 - requirements installation
   `pip install -r ./requirements/requirements.txt`
+- formatter 'Black' installation
+  `pip install black`
 
 ### Pytest
 
@@ -19,3 +21,24 @@ A collection of my experiences and test experiments with Python (Pytest)
   `python -m pytest`
 - test with extended report 'verbose'
   `python -m pytest -v`
+
+### Black
+
+- running black manually
+  `black . `
+
+- modify lines in settings.json
+
+```
+{
+"editor.formatOnSave": true,
+"python.formatting.provider": "black"
+}
+```
+
+- edit project settings in pyproject.toml
+
+```
+[tool.black]
+line-length = 119
+```
