@@ -21,6 +21,8 @@ A collection of my experiences and test experiments with Python (Pytest)
   `python -m pytest`
 - test with extended report 'verbose'
   `python -m pytest -v`
+- test results with generated report into "./test-reports/result.xml"
+  `python -m pytest -v --junitxml="./test-reports/result.xml"`
 
 ### Black
 
