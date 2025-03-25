@@ -3,7 +3,7 @@
 A collection of my experiences and test experiments with Python (Pytest):
 
 - [my_test.py](https://github.com/fiszym/Pytest_Automated_Testing/blob/ec38a689568d518c8f200f19fa589b38f1aa1e04/my_test.py) - set of tests regarding CSV file verification
-- [conftest.py]() - fixtures used in my_test.py
+- [conftest.py](https://github.com/fiszym/Pytest_Automated_Testing/blob/cb84faa3d7f834a90ecbe105ecf626009ee1e599/conftest.py) - fixtures used in my_test.py
 - [basic_code_example.py](https://github.com/fiszym/Pytest_Automated_Testing/blob/fa02f8a587083143b7503e6ea3ae92cce3970b0c/basic_code_example.py) - example of code demonstration
 
 ## Commands used in project
